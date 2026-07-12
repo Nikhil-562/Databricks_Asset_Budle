@@ -1,0 +1,20 @@
+resources:
+  jobs:
+    DAB_JOB:
+      name: DAB_JOB
+      tasks:
+        - task_key: DAB
+          notebook_task:
+            notebook_path: ../src/Practice1
+            base_parameters:
+              pipeline id: "{job.run_id}"
+            source: WORKSPACE
+        - task_key: DAB2
+          depends_on:
+            - task_key: DAB
+          notebook_task:
+            notebook_path: ../src/Practice 2
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
