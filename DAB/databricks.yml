@@ -20,7 +20,7 @@ targets:
     workspace:
       host: https://dbc-83addfdf-9b69.cloud.databricks.com
       # We always use /Users/nikhilkalra562@gmail.com for all resources to make sure we only have a single copy.
-      root_path: /Users/nikhilkalra562@gmail.com/
+      root_path: /Workspace/PROD
     run_as:
       # This runs as nikhilkalra562@gmail.com in production. We could also use a service principal here,
       # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
