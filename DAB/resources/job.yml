@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: DAB
           notebook_task:
-            notebook_path: ../src/Practice1
+            notebook_path: ../src/Practice1.ipynb
             base_parameters:
               pipeline id: "{job.run_id}"
             source: WORKSPACE
@@ -13,7 +13,13 @@ resources:
           depends_on:
             - task_key: DAB
           notebook_task:
-            notebook_path: ../src/Practice 2
+            notebook_path: ../src/Practice 2.ipynb
+            source: WORKSPACE
+        - task_key: DAB3
+          depends_on:
+            - task_key: DAB2
+          notebook_task:
+            notebook_path: ../src/practice3.ipynb
             source: WORKSPACE
       queue:
         enabled: true
